@@ -59,3 +59,5 @@ desktop.ini
 # Configurações locais dos editores
 .vscode/
 .idea/
+robots.txt
+SECURITY.md
