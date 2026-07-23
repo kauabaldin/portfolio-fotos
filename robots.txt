@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /tmp/
+Disallow: /pages/tmp/
+Disallow: /tmp/pdfs/

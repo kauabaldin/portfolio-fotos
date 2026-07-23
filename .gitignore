@@ -43,6 +43,9 @@ logs/
 *.tmp
 *.temp
 *.bak
+tmp/
+pages/tmp/
+tmp/pdfs/
 
 # Configurações do sistema operacional
 .DS_Store
