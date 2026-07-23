@@ -63,9 +63,3 @@ Não é permitida a reprodução ou utilização comercial das imagens sem autor
 ## Autor
 
 Desenvolvido por **Kaua Morera Baldin**.
-
-## Segurança e privacidade
-
-Este repositório é público e não deve conter senhas, tokens, credenciais,
-documentos pessoais ou dados privados. O site não envia nem armazena dados
-pessoais do visitante. Consulte `SECURITY.md` para reportar uma vulnerabilidade.
