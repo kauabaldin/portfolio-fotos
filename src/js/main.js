@@ -14,38 +14,47 @@ navigation.querySelectorAll("a").forEach((link) => {
   });
 });
 
-// Perguntar o nome do visitante ao carregar a página e armazenar em localStorage
-function getVisitorName() {
+// Solicita o nome do visitante e o guarda para os próximos contatos.
+function getVisitorName(askIfMissing = true) {
   try {
     const stored = localStorage.getItem("visitorName");
     if (stored && stored.trim()) return stored;
   } catch (e) {}
+
+  if (!askIfMissing) return "";
+
   const name = window.prompt(
-    "Olá! Como devemos chamar você? (se preferir, deixe em branco)",
+    "Olá! Qual é o seu nome?",
   );
+
   if (name && name.trim()) {
+    const visitorName = name.trim();
+
     try {
-      localStorage.setItem("visitorName", name.trim());
+      localStorage.setItem("visitorName", visitorName);
     } catch (e) {}
-    return name.trim();
+
+    return visitorName;
   }
+
   return "";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // prefetch name so prompt appears once
-  const _ = getVisitorName();
+  getVisitorName();
 
   document.querySelectorAll(".whatsapp-contact").forEach((el) => {
     el.addEventListener("click", (ev) => {
       ev.preventDefault();
+
       const phone = el.getAttribute("data-phone") || "5554991940138";
-      const name = (localStorage.getItem("visitorName") || "").trim();
+      const name = getVisitorName();
       const text = name
-        ? `Olá, meu nome é ${name}. Gostaria de informações sobre as fotos.`
-        : "Olá, gostaria de informações sobre as fotos.";
+        ? `Oii, sou ${name} e gostaria de saber mais informações.`
+        : "Oii, gostaria de saber mais informações.";
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
-      window.open(url, "_blank");
+
+      window.open(url, "_blank", "noopener,noreferrer");
     });
   });
 });
