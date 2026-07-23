@@ -3,13 +3,13 @@
 .env.*
 !.env.example
 
-# Dados, documentos e arquivos privados
+# Dados e documentos privados
 private/
 privado/
 dados-pessoais/
 documentos-privados/
 
-# Fotos que não devem ser publicadas
+# Fotos privadas ou originais
 assets/images/private/
 assets/images/originais/
 fotos-privadas/
@@ -28,7 +28,7 @@ curriculo-completo.pdf
 credentials.json
 secrets.json
 
-# Dependências, caso use Node.js
+# Dependências
 node_modules/
 
 # Arquivos gerados
@@ -45,7 +45,11 @@ logs/
 *.bak
 tmp/
 pages/tmp/
-tmp/pdfs/
+
+# Bancos de dados locais
+*.db
+*.sqlite
+*.sqlite3
 
 # Configurações do sistema operacional
 .DS_Store
