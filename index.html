@@ -15,6 +15,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/style.css" />
+    <style>
+      /* Ajustes responsivos para o título de serviços */
+      .services-intro{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:6vw;padding-right:6vw}
+      .services-intro h2{font-size:clamp(36px,8vw,120px)!important;margin:0 auto 50px!important;text-align:center!important;max-width:95ch!important;line-height:.95!important;word-break:break-word}
+      @media(max-width:760px){.services-intro{padding:6vw!important}.services-intro h2{font-size:clamp(28px,10vw,80px)!important;margin-bottom:40px!important}}
+    </style>
   </head>
   <body>
     <header class="header">
@@ -29,7 +35,7 @@
         <a
           class="contact-link whatsapp-contact"
           href="#"
-          data-phone="5554991940138"
+          data-phone-id="whatsapp"
           >Fale comigo ↗</a
         >
       </nav>
@@ -45,8 +51,8 @@
           <div class="hero-actions">
             <a
               class="whatsapp-contact"
-              href="#"
-              data-phone="5554991940138"
+                href="#"
+                data-phone-id="whatsapp"
               >Fale comigo</a
             >
             <a href="https://instagram.com/juliaeulampioo_fotos"
@@ -121,7 +127,7 @@
             <a
               class="whatsapp-contact"
               href="#"
-              data-phone="5554991940138"
+              data-phone-id="whatsapp"
               >Fale comigo</a
             ><a href="https://instagram.com/juliaeulampioo_fotos"
               >Acesse meu Instagram</a
@@ -310,7 +316,7 @@
             <a
               class="whatsapp-contact"
               href="#"
-              data-phone="5554991940138"
+              data-phone-id="whatsapp"
               target="_blank"
               rel="noopener noreferrer"
               >Entrar em contato</a
@@ -350,5 +356,6 @@
     </dialog>
 
     <script src="src/js/main.js"></script>
+    <script src="src/js/phone-loader.js"></script>
   </body>
 </html>
