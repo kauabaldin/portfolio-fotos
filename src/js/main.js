@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const phone = el.getAttribute("data-phone") || "5554991940138";
       const name = getVisitorName();
       const text = name
-        ? `Oii, sou ${name} e gostaria de saber mais informações.`
-        : "Oii, gostaria de saber mais informações.";
+        ? `Oii, sou ${name}! Vim pelo site do seu portfólio e gostaria de saber mais informações sobre os seus serviços.`
+        : "Oii! Vim pelo site do seu portfólio e gostaria de saber mais informações sobre os seus serviços.";
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
       window.open(url, "_blank", "noopener,noreferrer");
